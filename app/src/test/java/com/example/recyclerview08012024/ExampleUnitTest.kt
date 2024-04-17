@@ -22,10 +22,11 @@ class ExampleUnitTest {
         var distance4 = 999
         var distance5 = 9
 
-        assertEquals(TextUtils.exchangeDistance(distance1), "1 km")
-        assertEquals(TextUtils.exchangeDistance(distance2), "1.2 km")
-        assertEquals(TextUtils.exchangeDistance(distance3), "1.9 km")
-        assertEquals(TextUtils.exchangeDistance(distance4), "999 m")
-        assertEquals(TextUtils.exchangeDistance(distance5), "9 m")
+        assertEquals(TextUtils.formatDistance(distance1), "1 km")
+        assertEquals(TextUtils.formatDistance(distance2),"1.2 km")
+        assertEquals(TextUtils.formatDistance(distance3),"1.9 km")
+        assertEquals(TextUtils.formatDistance(distance4),"999 m")
+        assertEquals(TextUtils.formatDistance(distance5),"9 m")
     }
 }
+

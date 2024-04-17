@@ -2,11 +2,17 @@ package com.example.recyclerview08012024
 
 object TextUtils {
 
-    fun exchangeDistance(distance: Int): String{
+    fun formatDistance(distance: Int): String{
         return if (distance < 1000) {
             "$distance m"
         }else {
-            "${(distance.toInt()/1000)} km"
+            val result = (distance.toFloat() / 1000.toFloat())
+            var digitZero = ((result * 10) % 10).toInt() == 0
+            if (result %1 != 0f && !digitZero) {
+                "${String.format("%.1f", result)} km"
+            } else {
+                "${result.toInt()} km"
+            }
         }
     }
 }
