@@ -4,6 +4,6 @@ class Cinema (
     var image: Int,
     var name: String,
     var address: String,
-    var phone: Int,
+    var phone: String,
     var distance: Float
 )
