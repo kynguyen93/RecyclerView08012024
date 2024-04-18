@@ -21,12 +21,20 @@ class ExampleUnitTest {
         var distance3 = 1900
         var distance4 = 999
         var distance5 = 9
+        var distance6 = 1150
+        var distance7 = 1050
+        var distance8 = 1049
+        var distance9 = 1999
 
-        assertEquals(TextUtils.formatDistance(distance1), "1 km")
-        assertEquals(TextUtils.formatDistance(distance2),"1.2 km")
-        assertEquals(TextUtils.formatDistance(distance3),"1.9 km")
-        assertEquals(TextUtils.formatDistance(distance4),"999 m")
-        assertEquals(TextUtils.formatDistance(distance5),"9 m")
+        assertEquals("1 km", TextUtils.formatDistance(distance1))
+        assertEquals("1.2 km", TextUtils.formatDistance(distance2))
+        assertEquals("1.9 km", TextUtils.formatDistance(distance3))
+        assertEquals("999 m", TextUtils.formatDistance(distance4))
+        assertEquals("9 m", TextUtils.formatDistance(distance5))
+        assertEquals("1.2 km", TextUtils.formatDistance(distance6))
+        assertEquals("1.1 km", TextUtils.formatDistance(distance7))
+        assertEquals("1.1 km", TextUtils.formatDistance(distance8))
+        assertEquals("2 km", TextUtils.formatDistance(distance9))
     }
 }
 
