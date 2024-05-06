@@ -12,8 +12,8 @@ import java.util.zip.Inflater
 
 
 class CinemaAdapter(
-    var context: Context,
-    var listCinema: List<Cinema>
+    private var context: Context,
+    private var listCinema: List<Cinema>
 ): RecyclerView.Adapter<CinemaAdapter.CinemaViewHolder>() {
 
       class CinemaViewHolder(view: View): RecyclerView.ViewHolder(view) {
@@ -43,5 +43,4 @@ class CinemaAdapter(
     override fun onBindViewHolder(holder: CinemaViewHolder, position: Int) {
         holder.bind(listCinema[position])
     }
-
 }

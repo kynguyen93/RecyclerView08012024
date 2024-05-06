@@ -6,8 +6,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
+
+    private var recyclerView: RecyclerView? = null
+    private var cinemaAdapter: CinemaAdapter? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -18,9 +22,6 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val a = TextUtils
-        val b = TextUtils
-        Log.d("Nky", a.toString())
-        Log.d("Nky", b.toString())
+        recyclerView = findViewById(R.id.recyclerview_cinema)
     }
 }
