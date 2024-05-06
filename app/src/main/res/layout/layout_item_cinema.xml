@@ -16,7 +16,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-
         android:orientation="vertical">
 
         <TextView
@@ -42,8 +41,8 @@
             android:id="@+id/text_view_phone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="19002224"
             android:layout_marginTop="5dp"
+            tools:text="19002224"
             android:textSize="12sp"
             android:textColor="#473939" />
     </LinearLayout>
@@ -53,8 +52,7 @@
         android:paddingEnd="5dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="10dp"
-        android:gravity="center|left" >
+        android:gravity="center|end" >
 
         <ImageView
             android:layout_width="12dp"
