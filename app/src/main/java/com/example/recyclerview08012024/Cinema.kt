@@ -5,5 +5,5 @@ class Cinema (
     var name: String,
     var address: String,
     var phone: String,
-    var distance: Float
+    var distance: Int
 )

@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_gravity="center"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal">
 
@@ -29,7 +30,7 @@
             android:textSize="15sp" />
 
         <TextView
-            android:id="@+id/text_view_Address"
+            android:id="@+id/text_view_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12sp"
@@ -60,7 +61,7 @@
             android:src="@drawable/icon_pin" />
 
         <TextView
-            android:id="@+id/text_view_Distance"
+            android:id="@+id/text_view_distance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#0683E6"

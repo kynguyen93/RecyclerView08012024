@@ -19,16 +19,16 @@ class CinemaAdapter(
       class CinemaViewHolder(view: View): RecyclerView.ViewHolder(view) {
           private val img = view.findViewById<ImageView>(R.id.image_view_cinema)
           private val txtName = view.findViewById<TextView>(R.id.text_view_name)
-          private val txtAdress = view.findViewById<TextView>(R.id.text_view_address)
+          private val txtAddress = view.findViewById<TextView>(R.id.text_view_address)
           private val txtPhone = view.findViewById<TextView>(R.id.text_view_phone)
           private val txtDistance = view.findViewById<TextView>(R.id.text_view_distance)
 
           fun bind(cinema: Cinema) {
               img.setImageResource(cinema.image)
               txtName.text = cinema.name
-              txtAdress.text = cinema.address
+              txtAddress.text = cinema.address
               txtPhone.text = cinema.phone
-              txtDistance.text = cinema.distance.toString()
+              txtDistance.text = TextUtils.formatDistance(cinema.distance)
           }
       }
 
@@ -41,7 +41,7 @@ class CinemaAdapter(
     override fun getItemCount(): Int = listCinema.size
 
     override fun onBindViewHolder(holder: CinemaViewHolder, position: Int) {
-
+        holder.bind(listCinema[position])
     }
 
 }
