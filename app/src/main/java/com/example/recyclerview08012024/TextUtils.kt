@@ -24,7 +24,6 @@ object TextUtils {
                 }
                 } else {
                     "${result.toInt()} km"
-
             }
         }
     }
