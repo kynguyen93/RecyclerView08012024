@@ -50,7 +50,7 @@
 
     <LinearLayout
 
-        android:paddingEnd="5dp"
+        android:paddingEnd="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center|end" >
