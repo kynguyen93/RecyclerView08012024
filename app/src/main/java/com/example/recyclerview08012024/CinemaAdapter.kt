@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class CinemaAdapter(
     private var context: Context,
-    private var listCinema: List<Cinema>
+    private var listCinema: MutableList<Cinema>
 ): RecyclerView.Adapter<CinemaAdapter.CinemaViewHolder>() {
 
       inner class CinemaViewHolder(view: View): RecyclerView.ViewHolder(view) {
@@ -24,7 +24,10 @@ class CinemaAdapter(
 
           init {
               view.setOnClickListener {
-                  Log.d("NKy", listCinema.getOrNull(adapterPosition)?.name.toString())
+       //           Log.d("Nky", listCinema.getOrNull(adapterPosition)?.name.toString())
+                  listCinema.removeAt(adapterPosition)
+        //          notifyDataSetChanged() (xủ lý toàn bộ UI)
+                  notifyItemRemoved(adapterPosition)
               }
           }
 
