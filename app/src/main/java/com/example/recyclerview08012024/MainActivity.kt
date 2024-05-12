@@ -1,7 +1,9 @@
 package com.example.recyclerview08012024
 
+import android.icu.text.Transliterator.Position
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -27,5 +29,15 @@ class MainActivity : AppCompatActivity() {
         listCinema = Cinema.getDataMock().toMutableList()
         cinemaAdapter = CinemaAdapter(this, listCinema ?: mutableListOf())
         recyclerView?.adapter = cinemaAdapter
+
+        cinemaAdapter?.setOnItemClickListener(object : OnItemClickListener {
+            override fun onClick(position: Int) {
+                Toast.makeText(
+                    this@MainActivity,
+                    listCinema?.getOrNull(position)?.name.toString(),
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        })
     }
 }

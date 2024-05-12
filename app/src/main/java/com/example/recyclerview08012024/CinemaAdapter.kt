@@ -15,6 +15,8 @@ class CinemaAdapter(
     private var listCinema: MutableList<Cinema>
 ): RecyclerView.Adapter<CinemaAdapter.CinemaViewHolder>() {
 
+    private var onItemClickListener: OnItemClickListener? = null
+
       inner class CinemaViewHolder(view: View): RecyclerView.ViewHolder(view) {
           private val img = view.findViewById<ImageView>(R.id.image_view_cinema)
           private val txtName = view.findViewById<TextView>(R.id.text_view_name)
@@ -24,10 +26,7 @@ class CinemaAdapter(
 
           init {
               view.setOnClickListener {
-       //           Log.d("Nky", listCinema.getOrNull(adapterPosition)?.name.toString())
-                  listCinema.removeAt(adapterPosition)
-        //          notifyDataSetChanged() (xủ lý toàn bộ UI)
-                  notifyItemRemoved(adapterPosition)
+                  onItemClickListener?.onClick(adapterPosition)
               }
           }
 
@@ -50,5 +49,9 @@ class CinemaAdapter(
 
     override fun onBindViewHolder(holder: CinemaViewHolder, position: Int) {
         holder.bind(listCinema[position])
+    }
+
+    fun setOnItemClickListener(onItemClickListener: OnItemClickListener) {
+        this.onItemClickListener = onItemClickListener
     }
 }
